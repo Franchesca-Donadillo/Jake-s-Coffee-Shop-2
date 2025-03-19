@@ -1,0 +1,20 @@
+body {
+    background-color: #ffffcc ;
+    font-family: #330000; 
+    font-family: verdana;
+}
+
+div {
+    width: 80vw;
+    height: 80vh;
+    border: 3px solid black;
+    margin: auto;
+    padding: 10px;
+
+}
+
+h1{
+    width: 600px;
+    height: 45px;
+    border: 3px solid black;
+}
