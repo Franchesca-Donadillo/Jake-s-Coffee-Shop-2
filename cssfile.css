@@ -1,20 +1,35 @@
 body {
     background-color: #ffffcc ;
-    font-family: #330000; 
+    color: #330000; 
     font-family: verdana;
 }
 
-div {
+#container{
     width: 80vw;
     height: 80vh;
-    border: 3px solid black;
+    border: solid black;
     margin: auto;
-    padding: 10px;
+
 
 }
 
-h1{
-    width: 600px;
-    height: 45px;
-    border: 3px solid black;
+#header {
+    background-color: #CCAA66;
+    text-align: center;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    height: 80px;
+    margin: 0px;
+} 
+
+#hyperlinks{
+    background-color: #E8D882;
+    position: relative;
+    padding-left: 20px;
+    left: 0px;
+    width: 10vw;
+    height: 68.5vh;
+    float:left;
+    white-space:pre-line;
+
 }
