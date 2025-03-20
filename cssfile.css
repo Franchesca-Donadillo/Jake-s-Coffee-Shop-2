@@ -108,6 +108,13 @@ body {
     list-style-type: none;
 }
 
+#player{
+    position: absolute;
+    bottom: 5px;
+    width: 560px;
+    left: 20px;
+}
+
 #Jobs{
     background-color: #F1E8B0;
     position: relative;
