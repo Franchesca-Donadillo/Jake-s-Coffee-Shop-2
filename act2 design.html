@@ -17,13 +17,13 @@
             </div> 
             
             <div id ="hyperlinks"> 
-                <a  href="#" onclick="showPage('home')">Home<br></a> 
-                <a  href="#" onclick="showPage('Menu')">Menu<br></a>
-                <a  href="#" onclick="showPage('Music')">Music<br></a>
-                <a  href="#" onclick="showPage('Jobs')">Jobs<br></a>
+                <a  href="#home">Home<br></a> 
+                <a  href="#Menu">Menu<br></a>
+                <a  href="#Music">Music<br></a>
+                <a  href="#Jobs">Jobs<br></a>
             </div> 
             
-            <div id="home" class="page active">
+            <section id="home" class="page">
                 <p>Come in and experience...</p>                 
 
                     <img src="coffee.jpg" alt="coffee image" height="200vh" width="200vw" style="float: right;" />
@@ -38,9 +38,9 @@
                     </ul>
 
                     <p>23 Pine Road<br>Nottinghamn, NGI 5YU<br>0115 9324567</p>
-            </div>
+            </section>
                    
-            <div id="Menu" class="page">
+            <section id="Menu" class="page">
                 <h1 id="menutitle">Menu</h1>
                 <h2 id="coffee">☕Coffee</h2>
                 <ul id="coffeemenu">
@@ -59,13 +59,24 @@
                         <li>Chocolate Brownie – ₱90</li>
                         <li>Cookies - ₱30 </li>
                     </ul>
-            </div>
+            </section>
         
-            <div id="Music" class="page">
-                <h1>Contact Us</h1>
-                <p>Feel free to reach out.</p>
-            </div>
-                <div id="Jobs" class="page">
+            <section id="Music" class="page">
+                <h2>You can listen to the MUSIC you love!</h2>
+                
+                <ul id = musiclist>
+                    <li>
+                        <span>PUP HYMN</span>
+                        <audio controls>
+                        <audio id="myAudio">
+                            <source src="PUP HYMN.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </ul>
+            </section>
+                                    
+            <section id="Jobs" class="page">
                 <h1>Jobs Available</h1>
                 <ul>
                     <li>Barista</li>
@@ -74,7 +85,7 @@
                     <li>Baker</li>
                     <li>Manager</li>
                 </ul>
-            </div>
+            </section>
 
 
             <div id ="footer"> 
@@ -84,17 +95,6 @@
             </div>
         </div>
     
-        <script>
-            function showPage(pageId) {
-                // Hide all pages
-                let pages = document.querySelectorAll(".page");
-                pages.forEach(page => page.classList.remove("active"));
-    
-                // Show only the selected page
-                document.getElementById(pageId).classList.add("active");
-            }
-        </script>
-
     </body>
 
 </html>

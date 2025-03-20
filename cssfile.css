@@ -24,7 +24,7 @@ body {
     margin: 0px;
 } 
 
-#hyperlinks{
+#hyperlinks {
     background-color: #E8D882;
     position: relative;
     padding-left: 20px;
@@ -33,6 +33,12 @@ body {
     height: 320px;
     float:left;
     white-space:pre-line;
+    text-decoration: none;
+ 
+}
+
+#hyperlinks a{
+    text-decoration: none;
 }
 
 #home{
@@ -96,6 +102,10 @@ body {
     float:right;
     text-align: left;
 
+}
+
+#musiclist{
+    list-style-type: none;
 }
 
 #Jobs{
