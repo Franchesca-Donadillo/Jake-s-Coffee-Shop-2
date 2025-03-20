@@ -5,11 +5,13 @@ body {
 }
 
 #container{
-    width: 80vw;
-    height: 80vh;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 20%;
+    height: 480px;
+    width: 750px;
     border: solid black;
-    margin: auto;
-
+    padding:0px;
 
 }
 
@@ -27,9 +29,50 @@ body {
     position: relative;
     padding-left: 20px;
     left: 0px;
-    width: 10vw;
-    height: 68.5vh;
+    width: 130px;
+    height: 320px;
     float:left;
     white-space:pre-line;
+}
+
+#maincontent{
+    background-color: #F1E8B0;
+    position: relative;
+    width: 580px;
+    height: 300px;
+    padding: 10px;
+    float:right;
 
 }
+
+#footer{
+    background-color: #CCAA66;
+    border-top-style: solid;
+    height:61px;
+    font-style: italic;
+    padding-top: 10px;
+    text-align: center;
+    width: 750px;
+    margin-top: 320px;
+}
+
+#home{
+    background-color: #F1E8B0;
+    text-align: center;
+    
+
+}
+
+.page {
+    display: none;
+    padding: 30px;
+    background-color: #F1E8B0;
+    text-align: center;
+}
+
+.page:target {
+    display: block;
+}
+
+
+
