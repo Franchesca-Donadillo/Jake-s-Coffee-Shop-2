@@ -35,13 +35,78 @@ body {
     white-space:pre-line;
 }
 
-#maincontent{
+#home{
     background-color: #F1E8B0;
     position: relative;
     width: 580px;
     height: 300px;
     padding: 10px;
     float:right;
+    text-align: left;
+
+}
+
+#Menu{
+    background-color: #F1E8B0;
+    position: relative;
+    width: 580px;
+    height: 300px;
+    padding: 10px;
+    float:right;
+    text-align: left;
+}
+
+#menutitle{
+    position:absolute;
+    left: 210px;
+}
+
+
+#pastries{
+    position:absolute;
+    top:70px;
+    left:250px;
+ 
+}
+
+#pastriesmenu{
+    position:absolute;
+    top:125px;
+    left:250px;
+    line-height: 23px ;
+}
+
+#coffee{
+    position: absolute;
+    top: 70px;
+
+}
+
+#coffeemenu{
+    position: absolute;
+    top:125px;
+}
+
+#Music{
+    background-color: #F1E8B0;
+    position: relative;
+    width: 580px;
+    height: 300px;
+    padding: 10px;
+    float:right;
+    text-align: left;
+
+}
+
+#Jobs{
+    background-color: #F1E8B0;
+    position: relative;
+    width: 580px;
+    height: 300px;
+    padding: 10px;
+    float:right;
+    text-align: left;
+    line-height: 25px;
 
 }
 
@@ -56,18 +121,16 @@ body {
     margin-top: 320px;
 }
 
-#home{
-    background-color: #F1E8B0;
-    text-align: center;
-    
-
-}
-
 .page {
     display: none;
     padding: 30px;
     background-color: #F1E8B0;
-    text-align: center;
+
+}
+
+.active{
+    display: block;
+
 }
 
 .page:target {

@@ -17,13 +17,13 @@
             </div> 
             
             <div id ="hyperlinks"> 
-                <a  href="#home" target="_blank">Home<br></a> 
-                <a  href="#Menu" target="_blank">Menu<br></a>
-                <a  href="#Music" target="_blank">Music<br></a>
-                <a  href="#Jobs" target="_blank">Jobs<br></a>
+                <a  href="#" onclick="showPage('home')">Home<br></a> 
+                <a  href="#" onclick="showPage('Menu')">Menu<br></a>
+                <a  href="#" onclick="showPage('Music')">Music<br></a>
+                <a  href="#" onclick="showPage('Jobs')">Jobs<br></a>
             </div> 
             
-            <div id="maincontent">
+            <div id="home" class="page active">
                 <p>Come in and experience...</p>                 
 
                     <img src="coffee.jpg" alt="coffee image" height="200vh" width="200vw" style="float: right;" />
@@ -39,15 +39,26 @@
 
                     <p>23 Pine Road<br>Nottinghamn, NGI 5YU<br>0115 9324567</p>
             </div>
-            
-            <div id="home" class="page">
-                <h1>Welcome to the Home Page</h1>
-                <p>This is the home section.</p>
-            </div>
-        
+                   
             <div id="Menu" class="page">
-                <h1>About Us</h1>
-                <p>Learn more about us here.</p>
+                <h1 id="menutitle">Menu</h1>
+                <h2 id="coffee">☕Coffee</h2>
+                <ul id="coffeemenu">
+                    <li>Espresso - ₱120</li>
+                    <li>Americano – ₱130</li>
+                    <li>Cappuccino – ₱150</li>
+                    <li>Latte – ₱160</li>
+                    <li>Iced Coffee – ₱140</li>
+                    <li>Hot Chocolate – ₱130</li>
+                </ul>
+
+                <h2 id="pastries">🥐 Pastries & Snacks</h3>
+                    <ul id="pastriesmenu">
+                        <li>Fries – ₱90</li>
+                        <li>Muffin (Blueberry / Chocolate Chip) – ₱100</li>
+                        <li>Chocolate Brownie – ₱90</li>
+                        <li>Cookies - ₱30 </li>
+                    </ul>
             </div>
         
             <div id="Music" class="page">
@@ -55,18 +66,35 @@
                 <p>Feel free to reach out.</p>
             </div>
                 <div id="Jobs" class="page">
-                <h1>Jobs</h1>
-                <p>Feel free to reach out.</p>
+                <h1>Jobs Available</h1>
+                <ul>
+                    <li>Barista</li>
+                    <li>Cook</li>
+                    <li>Dishwaher</li>
+                    <li>Baker</li>
+                    <li>Manager</li>
+                </ul>
             </div>
 
 
             <div id ="footer"> 
 
-                <p>Copyright © 2011 Jake's Coffee House <br><a href="...">jake@jcoffee.com</a></p>
+                <p>Copyright © 2011 Jake's Coffee House <br><a href="mailto:jake@jcoffee.com">jake@jcoffee.com</a></p>
             
             </div>
         </div>
     
+        <script>
+            function showPage(pageId) {
+                // Hide all pages
+                let pages = document.querySelectorAll(".page");
+                pages.forEach(page => page.classList.remove("active"));
+    
+                // Show only the selected page
+                document.getElementById(pageId).classList.add("active");
+            }
+        </script>
+
     </body>
 
 </html>

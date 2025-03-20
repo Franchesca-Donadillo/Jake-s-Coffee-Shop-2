@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation with JavaScript</title>
+    <style>
+        .page { display: none; }  /* Hide all pages initially */
+        .active { display: block; } /* Only show active page */
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a> |
+        <a href="#" onclick="showPage('about')">About</a> |
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <!-- Page Sections -->
+    <div id="home" class="page active">
+        <h1>Home Page</h1>
+        <p>Welcome to our homepage!</p>
+    </div>
+
+    <div id="about" class="page">
+        <h1>About Us</h1>
+        <p>We are a cool company!</p>
+    </div>
+
+    <div id="contact" class="page">
+        <h1>Contact Us</h1>
+        <p>Reach us at: contact@example.com</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            let pages = document.querySelectorAll(".page");
+            pages.forEach(page => page.classList.remove("active"));
+
+            // Show only the selected page
+            document.getElementById(pageId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
