@@ -49,7 +49,7 @@ body {
     padding: 10px;
     float:right;
     text-align: left;
-   
+
 }
 
 #Menu{
@@ -126,6 +126,36 @@ body {
     line-height: 25px;
 
 }
+
+
+.content-section{
+    display: none;
+}
+
+#home:target,
+#Menu:target,
+#Music:target,
+#Jobs:target {
+    display: block;
+}
+
+body:has(#home:target) #home{
+    display: block;
+}
+
+:target ~ #home{
+    display: none;
+}
+
+:root:has(:target) #home{
+    display: none;
+}
+
+:root:has(:has(:target)) #home{
+    display: block;
+}
+
+
 
 #footer{
     background-color: #CCAA66;
