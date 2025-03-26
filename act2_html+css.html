@@ -67,7 +67,7 @@
                     <li>
                         <details>
                             <summary>🎵 DAYLIGHT</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Harry Styles - Daylight (Audio).mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -76,7 +76,7 @@
                     <li>
                         <details>
                             <summary>🎵 FINE LINE</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Harry Styles - Fine Line (Official Audio).mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -85,7 +85,7 @@
                     <li>
                         <details>
                             <summary>🎵 I LOVE YOU I'M SORRY</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Gracie Abrams - I Love You, I'm Sorry (Live)  Vevo Extended Play.mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -94,7 +94,7 @@
                     <li>
                         <details>
                             <summary>🎵 LA LA LOST YOU</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="NIKI - La La Lost You (Live)  Acoustic Sessions.mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -103,7 +103,7 @@
                     <li>
                         <details>
                             <summary>🎵 PARENT SONG</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Jeremy Zucker, Chelsea Cutler - parent song (Official Lyric Video).mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -112,7 +112,7 @@
                     <li>
                         <details>
                             <summary>🎵 REQUIEM</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="keshi - Requiem (Official Visualizer).mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -121,7 +121,7 @@
                     <li>
                         <details>
                             <summary>🎵 SHOULDN'T BE</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Shouldn't Be.mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -130,7 +130,7 @@
                     <li>
                         <details>
                             <summary>🎵 THE MOST BEAUTIFUL THING</summary>
-                            <audio controls id="player">
+                            <audio controls class="player" id="player">
                                 <source src="Bruno Major - The Most Beautiful Thing (Lyric & Chord Video).mp3" type="audio/mpeg">
                             </audio>
                         </details>
@@ -156,6 +156,45 @@
                 <p>Copyright © 2011 Jake's Coffee House <br><a href="mailto:jake@jcoffee.com">jake@jcoffee.com</a></p>
             
             </div>
+        
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const detailsList = document.querySelectorAll("details");
+            
+                    detailsList.forEach(details => {
+                        const audio = details.querySelector(".player");
+            
+                        // Hide all audio players initially
+                        audio.style.display = "none";
+            
+                        details.addEventListener("toggle", function () {
+                            if (details.open) {
+                                // Hide and stop all other audio players
+                                detailsList.forEach(otherDetails => {
+                                    if (otherDetails !== details) {
+                                        const otherAudio = otherDetails.querySelector(".player");
+                                        otherAudio.pause();
+                                        otherAudio.currentTime = 0;
+                                        otherAudio.style.display = "none";
+                                        otherDetails.open = false; // Close other details
+                                    }
+                                });
+            
+                                // Show and play the selected audio
+                                audio.style.display = "block";
+                                audio.play();
+                            } else {
+                                // Stop and hide audio when details is closed
+                                audio.pause();
+                                audio.currentTime = 0;
+                                audio.style.display = "none";
+                            }
+                        });
+                    });
+                });
+            </script>
+        
+        
         </div>
     
     </body>
